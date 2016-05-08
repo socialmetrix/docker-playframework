@@ -10,16 +10,17 @@ All images are based on the official [java:7-alpine](https://hub.docker.com/_/ja
 * [1.2.7.2-alpine](1.2.7.2-alpine/Dockerfile)
 * [1.3.4-alpine](1.3.4-alpine/Dockerfile)
 * [1.4.2-alpine](1.4.2-alpine/Dockerfile)
+* **latest** means **1.4.2-alpine**
 
 ## Usage
 
 
-### You can use this image as develop environment:
+### You can use this image as development environment:
 
 ```bash
 docker run -it --rm \
   -v $(pwd)/src:/app \
-  play:1.2.5.6-alpine \
+  socialmetrix/play:1.2.5.6-alpine \
   play new test
 ```
 
@@ -29,11 +30,11 @@ docker run \
   -p 9000:9000 -d \
   -v ~/.ivy2:/root/.ivy2 \
   -v $(pwd)/src:/app \
-  play:1.2.5.6-alpine \
+  socialmetrix/play:1.2.5.6-alpine \
   play run test
 ```
 
-### As base to pack your application:
+### As base image to pack your application:
 Below a example of `Dockerfile` using version `1.2.5.6-alpine`, setting `id` to `prod` and installing `sass` module.
 
 ```
