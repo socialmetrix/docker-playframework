@@ -38,3 +38,10 @@ for PLAY_VERSION in $(echo $PLAY_VERSIONS); do
 done
 
 docker images play
+
+# Push to socialmetrix/play repo
+for PLAY_VERSION in $(echo $PLAY_VERSIONS); do
+  IMAGE_VERSION=${PLAY_VERSION}-alpine
+  docker tag play:${IMAGE_VERSION} socialmetrix/play:${IMAGE_VERSION}
+  docker push socialmetrix/play:${IMAGE_VERSION}
+done
