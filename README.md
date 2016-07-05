@@ -3,7 +3,7 @@
 We build this repository to maintain **[PlayFramework](https://www.playframework.com/download#older-versions)** docker images for the latest MINOR and PATCH version of each **RELEASE 1.X**
 
 ## Supported tags and respective Dockerfile links
-All images are based on the official [java:7-alpine](https://hub.docker.com/_/java/) image and are minimalistic.
+All images are based on [anapsix/alpine-java](https://hub.docker.com/r/anapsix/alpine-java/) image and are minimalistic. This image also support CERTS so Java can connect to HTTPS.
 
 * [1.2.5.6-alpine](1.2.5.6-alpine/Dockerfile)
 * [1.2.6.2-alpine](1.2.6.2-alpine/Dockerfile)

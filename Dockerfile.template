@@ -1,4 +1,4 @@
-FROM java:7-alpine
+FROM anapsix/alpine-java:jdk7
 MAINTAINER http://socialmetrix.com
 
 RUN mkdir -p /app
